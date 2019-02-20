@@ -1,0 +1,54 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+    <div id="signup">
+    
+        <div class="container">
+            <div id="signup-row" class="row justify-content-center align-items-center">
+                <div id="signup-column" class="col-md-6">
+                    <div id="signup-box" class="col-md-12">
+                        <form id="signup-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Regiater the User</h3>
+                            <div class="form-group">
+                                <label for="firstname" class="text-info">First Name:</label><br>
+                                <input type="text" name="firstname" id="firstname" required [(ngModel)]="model.FirstName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="text-info">Last Name:</label><br>
+                                <input type="text" name="lastname" id="lastname" required [(ngModel)]="model.LastName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email" class="text-info">Email:</label><br>
+                                <input type="text" name="email" id="email" required [(ngModel)]="model.Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="text-info">Location:</label><br>
+                                <input type="text" name="location" id="location" required [(ngModel)]="model.Location" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="username" class="text-info">User Name:</label><br>
+                                <input type="text" name="username" id="username" required [(ngModel)]="model.UserName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="text" name="location" id="location" required [(ngModel)]="model.Password" class="form-control">
+                            </div>
+
+                            
+                            <div class="form-group">
+                              <!--Write submit function access the method in .ts file, that will check through service.ts-->
+                                <input type="submit" (click)="signup()" name="submit" class="btn btn-info btn-md" value="Submit">
+                                <input type="submit" routerLink="/" name="submit" class="btn btn-danger btn-md" value="Cancel">
+                                <input type="submit" routerLink="/" name="submit" style="float: right" class="btn btn-success" value="Clear">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
